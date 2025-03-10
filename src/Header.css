@@ -1,0 +1,17 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+}
+
+#headerWrapper {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+    padding: 3rem;
+}
+
+#headerLinks {
+    padding: 1rem;
+}
