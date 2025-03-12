@@ -1,20 +1,16 @@
 import { useState } from 'react'
-import { Menu, X } from "lucide-react";
+import './Header.css'
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(0)
 
     return (
-        <div classname="headerWrapper">
-            <button classname="menuIcon" onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+        <div className="headerWrapper">
 
-            <nav className="headerLinks">
-                <a href="#" className="hover:underline">Home</a>
-                <a href="#" className="hover:underline">About</a>
-                <a href="#" className="hover:underline">Services</a>
-                <a href="#" className="hover:underline">Contact</a>
+            <nav className="linkWrapper">
+                <a href="#" className="headerLinks">Home</a>
+                <a href="#" className="headerLinks">About</a>
+                <a href="#" className="headerLinks">Services</a>
+                <a href="#" className="headerLinks">Contact</a>
             </nav>
         </div>
     )
