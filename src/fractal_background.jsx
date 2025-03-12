@@ -48,8 +48,8 @@ const FractalBackground = () => {
         uniform float zoom;
         uniform vec2 resolution;
         void main() {
-          vec2 uv = (gl_FragCoord.xy - 0.5 * resolution.xy) / resolution.y;
-          vec2 c = vec2(-0.95, 0.0) + uv / zoom;
+          vec2 uv = vec2(0.2, 0.0) + ((gl_FragCoord.xy - 0.5 * resolution.xy) / resolution.y);
+          vec2 c = vec2(-1.4, 0.0) + uv / zoom;
           vec2 z = vec2(0.0);
           int iterations = 0;
           const int maxIterations = 100;
@@ -75,7 +75,7 @@ const FractalBackground = () => {
     let animationFrameId;
     const animate = () => {
         const scrollValue = window.scrollY;
-        const newZoom = 1 + scrollValue / 1000;
+        const newZoom = 1 + scrollValue / 500;
         uniforms.zoom.value = newZoom;
         console.log('Zoom value:', newZoom);
         renderer.render(scene, camera);
@@ -96,16 +96,6 @@ const FractalBackground = () => {
       uniforms.resolution.value.set(newWidth, newHeight);
     };
     window.addEventListener('resize', handleResize);
-
-    // Cleanup: cancel animation frame, remove event listener, and remove canvas
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', handleResize);
-      if (mountRef.current && renderer.domElement.parentElement === mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
-      }
-      renderer.dispose();
-    };
   }, []);
 
   return (
