@@ -5,6 +5,9 @@ export default function Header() {
 
     return (
         <div className="headerWrapper">
+            <div className="logoWrapper">
+                <h1>logo</h1>
+            </div>
 
             <nav className="linkWrapper">
                 <a href="#" className="headerLinks">Home</a>
