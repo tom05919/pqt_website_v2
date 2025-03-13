@@ -60,8 +60,13 @@ const FractalBackground = () => {
             );
             iterations++;
           }
-          float color = float(iterations) / float(maxIterations);
-          gl_FragColor = vec4(vec3(color), 1.0);
+    
+            // float smoothColor = iterations == maxIterations ? 0.0 : float(iterations) - log2(log2(dot(z, z)));
+            // vec3 color = vec3(0.8 + 0.5 * cos(0.0 + smoothColor * 0.15),
+            //           0.9 + 0.5 * cos(0.0 + smoothColor * 0.55 + 2.0),
+            //           0.9 + 0.5 * cos(0.0 + smoothColor * 0.15 + 4.0));
+            float color = float(iterations) / float(maxIterations);
+            gl_FragColor = vec4(vec3(color), 1.0);
         }
       `
     });
@@ -107,7 +112,7 @@ const FractalBackground = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: -1 // ensures it stays behind other content
+        zIndex: -1,
       }}
     />
   );
