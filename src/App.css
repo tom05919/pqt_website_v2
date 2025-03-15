@@ -1,33 +1,78 @@
 .bodyContainer {
-  max-width: 1280px;
-  margin: 3rem auto;
-  padding: 2rem;
+  padding-top: 4.5rem;
+  width: 100%;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   height: 100%;
-  overflow-y: scroll;
+  margin: 0;
 }
 
 .introHomeContainer {
   height: 30rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  -webkit-text-stroke-width: 0.6px;
-  -webkit-text-stroke-color: black;
+  justify-content: center;
+  align-items: center;
+  color: #b3b5b4;
+  /* -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black; */
 }
 
 .homePageLogo {
-  font-size: 60px;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.description {
+  padding: 25px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .homePageDes {
-  font-size: 25px;
+  font-size: 30px;
+}
+
+.medText{
+  font-size: 30px;
+}
+
+.subtext {
+  font-size: 20px;
 }
 
 .introPageBody {
-  width: 100%;
-  height: 30rem;
-  background-color: aliceblue;
+  width: 85%;
+  height: 20rem;
+  padding: 20px;
+  background-color: rgb(51, 49, 49);
+  border-radius: 10px;
 }
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+

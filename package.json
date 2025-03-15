@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/oswald": "^5.2.5",
+    "@fontsource-variable/outfit": "^5.2.5",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.479.0",
     "react": "^19.0.0",
